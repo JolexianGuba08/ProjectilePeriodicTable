@@ -1,0 +1,285 @@
+
+@import "_normalize.css";
+
+html {
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2vw;
+  max-width: 1700px;
+}
+
+#table {
+  display: grid;
+  grid-template-columns: repeat(17, auto) 1fr;
+}
+
+.site-title {
+  font-size: 1rem;
+}
+
+/* Every element box  */
+.element {
+  cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  padding: 2px;
+  /* border: 1px solid #333; */
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.number {
+  float: left;
+  font-size: 0.5vw;
+  position: absolute;
+}
+
+.symbol {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5vw;
+  font-size: 2.5vw;
+}
+
+.element-name {
+  font-size: 0.8vw;
+  text-align: center;
+}
+
+#element-box .symbol {
+  font-size: 5vw;
+}
+
+#element-box .number {
+  font-size: 1vw;
+}
+
+#element-box .element-name {
+  font-size: 1.5vw;
+}
+
+#element-box {
+  grid-column: 3/5;
+  grid-row: 2/4;
+  margin: 0;
+  padding: 0.2vw;
+  overflow: hidden;
+}
+
+/* Information Table  */
+#information {
+  grid-column: 5/13;
+  grid-row: 2/4;
+  padding: 0.5vw;
+  padding-top: 0;
+  font-size: 1vw;
+  max-height: 10vw;
+  overflow-y: scroll;
+  color: white;
+}
+
+
+#information h1 {
+  margin: 0 0 0.5vw 0;
+}
+
+.big_title {
+  display: inline-block;
+}
+
+.cat_name {
+  border-radius: 3px;
+  padding: 0 5px;
+  margin-left: 5px;
+  top: -0.7vw;
+  position: relative;
+}
+
+.close-button {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.appearance {
+  margin-bottom: 0.5vw;
+}
+
+.atom_info {
+  margin-bottom: 0.5vw;
+  color: #998100;
+}
+
+/* Helium to the top right  */
+.element-2 {
+  grid-column-start: -2;
+}
+
+/* Boron & Alumunium to the right  */
+.element-5,
+.element-13 {
+  grid-column-start: 13;
+}
+
+/* Lanthinide & Actinoid split  */
+.element-58,
+.element-90 {
+  grid-column-start: 3;
+}
+
+/* I DID NOT KNOW THERE WAS 119th ONE! */
+
+.element-119 {
+  grid-column-start: -2;
+}
+
+/* Categories and Groups */
+
+/* Noble Gas  */
+.noble {
+  background: #f8d1e7;
+  background: linear-gradient(60deg, #f8d1e7, #b23f7c);
+}
+
+/* Alkali Metal  */
+.alkali {
+  background: #ffa69e;
+  background: linear-gradient(60deg, #ffa69e, #e62b17);
+}
+
+/* Alkaline Earth Metal  */
+.alkaline {
+  background: #fddbb0;
+  background: linear-gradient(60deg, #fddbb0, #e86a14);
+}
+
+/* Transition Metal  */
+.transition {
+  background: #f7ff72;
+  background: linear-gradient(60deg, #f7ff72, #eaa90a);
+}
+
+/* Polyatomic Non Metal  */
+.polyatomic {
+  background: #b5d1d4;
+  background: linear-gradient(60deg, #b5d1d4, #1b6c6d);
+}
+
+/* Diatomic Non Metal  */
+.diatomic {
+  background: #a2d5b7;
+  background: linear-gradient(60deg, #a2d5b7, #3e8f6e);
+}
+
+/* Post Transition Metal  */
+.post-transition {
+  background: #9cb9d9;
+  background: linear-gradient(60deg, #9cb9d9, #0a57d9);
+}
+
+/* Metalloid  */
+.metalloid {
+  background: #7ed89c;
+  background: linear-gradient(90deg, #7ed89c, #207f51);
+}
+
+/* Lanthanide  */
+.lanthanide {
+  background: #d1f;
+  background: linear-gradient(90deg, #d1f, #900bc6);
+ 
+}
+
+/* Actinide  */
+.actinide {
+  background: #c29dd1;
+  background: linear-gradient(90deg, #c29dd1, #9406db);
+}
+
+/* The Unknown Element  */
+.unknown {
+  background: #c6f;
+  background: linear-gradient(90deg, #c6f, #0d8d8d);
+}
+
+/* Disable the top space for the first lathenide which sits inside the table  */
+.element-57 {
+  margin: 0;
+}
+
+/* When in the hover state  */
+.active {
+  /* background: #fff; */
+  background: #000;
+  color: #fff;
+  /* border-color: yellow; */
+}
+
+.footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#legend-parent {
+  grid-column: 3/13;
+  grid-row: 2/4;
+  padding: 0.5vw;
+  padding-top: 0;
+  font-size: 1vw;
+  max-height: 10vw;
+  overflow-y: scroll;
+  color: white;
+  text-align: center;
+  align-items: center; /* Align children in the center vertically */
+}
+.legend {
+  display: flex;
+}
+.legend-item {
+  margin-right: 20px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+
+@media (max-width: 375px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .element {
+    border: 0;
+    width: 7vw;
+    height: 7vw;
+  }
+}

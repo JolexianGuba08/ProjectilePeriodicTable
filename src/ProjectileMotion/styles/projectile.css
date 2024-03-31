@@ -1,0 +1,137 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+.MafsView {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.additional-calculations {
+  position: absolute;
+  bottom: 0; /* Position the element at the bottom of its containing block */
+  left: 50%; /* Position the left edge of the element at the horizontal center of its containing block */
+  transform: translateX(-50%); /* Move the element horizontally by -50% of its own width */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgba(14, 75, 98, 0.67);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 5px;
+}
+
+
+/* Apply styles to the line with marker */
+line {
+  stroke-width: 2;
+  stroke: green !important;
+
+}
+.button-container {
+  width: 70%;
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: space-between;
+  margin-top:15px;
+  background-color: transparent;
+}
+
+.text{
+  margin-right: 15px;
+}
+.label {
+  margin: 20px;
+  font-weight: bold;
+  color: #ffa500; /* Orange color for emphasis, representing a basketball */
+}
+
+.additional-calculations p {
+  justify-content: space-evenly;
+}
+
+
+
+
+.action-button {
+  padding: 15px 100px; /* Increased padding for a larger button */
+  font-size: 18px; /* Increased font size for better visibility */
+  border-radius: 8px; /* Slightly rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-button {
+  background-color: #4caf50; /* Green color */
+  color: white;
+  border: none;
+}
+
+.reset-button {
+  background-color: #ff0000; /* Red color */
+  color: white;
+  border: none;
+}
+
+.action-button:hover {
+  filter: brightness(90%); /* Darken the button on hover */
+}
+
+/* Apply styles to the dashed path */
+path {
+  stroke-width: 5!important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  stroke-dasharray: 1, 10 !important;
+  stroke: rgb(0, 0, 0) !important;
+
+
+}
+
+circle {
+  fill: #9b0000 !important;
+  r: 18 !important;
+  --movable-point-ring-size: 20px;
+}
+
+/* Apply styles to the movable point */
+.mafs-movable-point circle{
+  fill: black !important; /* Change this color to your desired movable point color */
+  --movable-point-ring-size: 25px !important;
+
+}
+
+
+.mafs-movable-point-point{
+
+
+}
+
+.mafs-movable-point-hitbox {
+
+
+}
+
+.mafs-movable-point-focus  {
+
+
+}
+
+.mafs-movable-point-ring {
+
+}
+
+
